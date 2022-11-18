@@ -19,7 +19,9 @@ class ParkirController extends Controller
 
         $keluar = Masuk::when($request->cari, function ($query) use ($request) {
             $query->where('no_pol', 'LIKE', "%{$request->cari}%");
-        });
+        })->paginate(10);
+
+        $keluar->appends($request->only('cari'));
         return view('parkir.keluar', compact('keluar','result'));
     }
 

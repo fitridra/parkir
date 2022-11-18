@@ -51,7 +51,7 @@
                         <a class="nav-link" aria-current="page" href="/">From Check In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">From Check Out</a>
+                        <a class="nav-link" href="/keluar">From Check Out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/result">Report</a>
@@ -87,7 +87,7 @@
 
             <div class="mb-3">
                 <label for="jk" class="form-label">Waktu Keluar</label>
-                <input type="text" class="form-control" id="jk" name="updated_at" value="{{$keluar->updated_at}}" readonly>
+                <input type="text" class="form-control" id="jk" value="{{now()}}" readonly>
             </div>
 
             <button type="submit" class="btn btn-primary">Keluar Sekarang</button>

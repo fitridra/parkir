@@ -51,7 +51,7 @@
                         <a class="nav-link" aria-current="page" href="/">From Check In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">From Check Out</a>
+                        <a class="nav-link" href="/keluar">From Check Out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/result">Report</a>

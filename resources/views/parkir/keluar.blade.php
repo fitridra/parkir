@@ -68,6 +68,16 @@
             {{session('sukses')}}
         </div>
         @endif
+
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <form class="d-flex mx-auto" method="GET" action="{{ url()->current() }}">
+                    <input class="form-control me-2" type="text" name="cari" placeholder="BD 1234 CC" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cari Nomor Polisi</button>
+                </form>
+            </div>
+        </nav>
+
         <table class="table">
             <thead>
                 <tr>
@@ -82,7 +92,7 @@
                 @php
                 $no=1;
                 @endphp
-                @foreach($result as $rs)
+                @foreach($keluar as $rs)
                 <tr>
                     <th scope="row">{{$no++}}</th>
                     <td>{{$rs->no_pol}}</td>
@@ -92,7 +102,14 @@
                 </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table><br>
+        <div class="pagging text-center">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    {{ $keluar->links() }}
+                </ul>
+            </nav>
+        </div>
     </main>
 
 
